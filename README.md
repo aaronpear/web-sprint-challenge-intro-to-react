@@ -79,6 +79,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+React JS is a JavaScript framework that streamlines the JavaScript language into its own more abstract language that allows us as developers to much more easily and efficiently build code when we need and expect to frequently interact with and update the DOM. For example, in vanilla JavaScript when constructing components we would need to manually target and append to every tag as we did in last week's Applied JavaScript sprint, but with React we can write HTML-like code directly into our React JS files to render onto our webpage, on top of React being able to dynamically remove from and append to the DOM allowing us to see updates to the web page in real time.
+
 1. Describe component state.
+
+At its core, state in React JS is just a JavaScript object, but the biggest differentiation between a normal object vs state is that when state is updated, React then follows up by rendering the new state onto the web page.
+
 1. Describe props.
+
+Props is short for the properties that are passed from a Parent component to a Child component. These properties may be of any type of variable and the Child component only receives the properties that were passed in when the component was being called, similar to regular functions in vanilla JavaScript.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are when anything is affected by the currently executing code outside of the scope of the function. To sync components to changes in states or props, we use the useEffect() method to run a block of code and update any relevant code when a given state or prop is ever changed.

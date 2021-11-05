@@ -14,8 +14,8 @@ const Characters = (props) => {
     const { characters } = props;
     return (
         <StyledDiv className='characters-div'>
-            {characters.map(character => {
-                return <Character name={character.name} />
+            {characters.map((character, index) => {
+                return <Character character={character} key={index} />
                 // console.log(character.name);
             })}
         </StyledDiv>

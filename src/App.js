@@ -3,7 +3,6 @@ import './App.css';
 import axios from 'axios';
 import styled from 'styled-components';
 
-import Character from './components/Character';
 import Characters from './components/Characters';
 
 const StyledDiv = styled.div`
@@ -25,7 +24,7 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
       .then(response => {
-        // console.log(response);
+        console.log(response);
         setCharacters(response.data);
       })
       .catch(error => {
