@@ -21,12 +21,14 @@ const StyledCharacter = styled.div`
 `
 
 const Character = (props) => {
-    const { character } = props;
-
+    const { character, key } = props;
+    const [dropdownOn, setDropdownon] = useState(false);
     return (
         <StyledCharacter className='character'>
-            <p className='name'>{character.name}<i className="fas fa-angle-down"></i></p>
-            <CharDropdown character={character} />
+            <p className='name'>{character.name}
+                <i className="fas fa-angle-down" onClick={() => setDropdownon(!dropdownOn)}></i>
+            </p>
+            {dropdownOn ? <CharDropdown character={character} /> : null }
         </StyledCharacter>
     );
 }
