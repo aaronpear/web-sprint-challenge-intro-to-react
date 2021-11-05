@@ -4,11 +4,12 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 import Character from './components/Character';
+import Characters from './components/Characters';
 
 const StyledDiv = styled.div`
-  border: 2px solid black;
-  border-radius: 2%;
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const App = () => {
@@ -36,10 +37,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <StyledDiv>
-        {characters.map(character => {
-          return <Character name={character.name} />
-          // console.log(character.name);
-        })}
+        <Characters characters={characters} />
       </StyledDiv>
     </div>
   );
